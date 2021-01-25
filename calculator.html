@@ -11,50 +11,54 @@
 <body>
     <div class="calculator">
         <div id="screen">
-
+            <div class="battle"></div>
+            <div class="resultScreen">
+                <div><span>=</span></div>
+                <div id="result"></div>
+            </div>
         </div>
         <div id="buttons">
             <div id="division1">
                 <div id="row1">
-                    <div class="button orange">AC</div>
-                    <div class="button orange">
+                    <div id="clean" class="button rose">AC</div> 
+                    <div class="button operation rose">*</div>
+                    <div class="button operation rose">/</div>
+                    <div id="delete" class="button rose">
                         <i class="fas fa-backspace"></i>
                     </div>
-                    <div class="button orange">%</div>
-                    <div class="button orange">/</div>
                 </div>
                 <div  id="row2">
-                    <div class="button black">7</div>
-                    <div class="button black">8</div>
-                    <div class="button black">9</div>
-                    <div class="button orange">*</div>
+                    <div class="button number black">7</div>
+                    <div class="button number black">8</div>
+                    <div class="button number black">9</div>
+                    <div class="button operation rose">+</div>
                 </div>
                 <div id="row3">
-                    <div class="button black">4</div>
-                    <div class="button black">5</div>
-                    <div class="button black">6</div>
-                    <div class="button orange">-</div>
+                    <div class="button number black">4</div>
+                    <div class="button number black">5</div>
+                    <div class="button number black">6</div>
+                    <div class="button operation rose">-</div>
                 </div>
             </div>
             <div id="division2">
                 <div id="division3">
                     <div id="row4">
-                        <div class="button black">1</div>
-                        <div class="button black">2</div>
-                        <div class="button black">3</div>
+                        <div class="button number black">1</div>
+                        <div class="button number black">2</div>
+                        <div class="button number black">3</div>
                     </div>
                     <div id="row5">
-                        <div class="button black">0</div>
-                        <div class="button black">.</div>
-                        <div class="button orange">=</div>
+                        <div class="button number black">0</div>
+                        <div class="button number black">.</div>
+                        <div class="button rose">Ans</div>
                     </div>
                 </div>
                 <div  id="division4">
-                    <div class="button orange" id="addition">+</div>
+                    <div class="button rose" id="calcul">=</div>
                 </div>
             </div>
         </div>
     </div>
-    
+<script type="text/javascript" src="./calculator.js"></script>  
 </body>
 </html>
