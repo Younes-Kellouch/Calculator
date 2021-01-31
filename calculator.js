@@ -1,4 +1,5 @@
 const screen=document.querySelector(".battle");
+const screenResultat=document.querySelector("#result");
 const buttonsContainer=document.querySelector("#buttons");
 const deleteButton=document.querySelector("#delete");
 const clean=document.querySelector("#clean");
@@ -18,6 +19,14 @@ deleteHandler=()=>{
     }
 }
 
+toArrayNmbAndOps=(StringToArray)=>{
+
+    let finalArray=StringToArray.replaceAll("*",",*,")
+                    .replaceAll("/",",/,").replaceAll("+",",+,")
+                    .replaceAll("-",",-,").split(",");
+    console.log(finalArray);
+}
+toArrayNmbAndOps("2*6/4-5+2/1-5*2");
 addToScreen = (event)=>{
     if(screen.innerText.length==0){
         if(event.target.classList.contains("number")){
@@ -92,7 +101,29 @@ addingTextToSpan=(text)=>{
 }
 
 calculResultHandler=()=>{
-    let result;
+
+    const indexLastElement=screen.innerText.length-1;
+    const screenContent=screen.innerText;
+    const lastElementInserted=screenContent.innerText[indexLastElement];
+   
+   
+        if( lastElementInserted !== "+" &&
+            lastElementInserted !== "-" &&
+            lastElementInserted !== "*" &&
+            lastElementInserted !== "/" &&
+            lastElementInserted !== "."){
+                let count=0;
+                const arrayWork=toArrayNmbAndOps(screenContent);
+                while( count<arrayWork.length ){
+                    if( arrayWork[i]=="*"||arrayWork[i]=="/" ){
+                        
+                    }
+                }
+
+        }
+    
+   
+
 
 }
 
@@ -100,5 +131,4 @@ buttonsContainer.addEventListener("click",addToScreen);
 deleteButton.addEventListener("click",deleteHandler);
 clean.addEventListener("click",()=>{
     screen.innerText="";
-    console.log("hi");
 });
